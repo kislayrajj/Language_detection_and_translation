@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+
+venv/
+env/
+
+# Model and vectorizer files
+
+*.pkl
+
+# CSV or dataset files
+
+*.csv
+
+# VS Code and IDE settings
+
+.vscode/
+.idea/
+
+# OS generated files
+
+.DS_Store
+Thumbs.db
+
+# Logs
+
+*.log
+
+# Environment variables or config
+
+.env
+config.json
+secrets.json
