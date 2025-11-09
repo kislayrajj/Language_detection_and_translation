@@ -1,0 +1,13 @@
+streamlit
+joblib
+numpy
+googletrans==4.0.0rc1
+pandas
+scikit-learn
+matplotlib
+seaborn
+transformers
+torch
+datasets
+fastapi
+uvicorn

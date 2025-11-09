@@ -4,6 +4,11 @@ import streamlit as st
 import joblib
 import numpy as np
 from datetime import datetime
+import warnings
+from sklearn.exceptions import InconsistentVersionWarning
+
+# Suppress sklearn version inconsistency warnings
+warnings.filterwarnings("ignore", category=InconsistentVersionWarning)
 
 try:
     from googletrans import Translator
@@ -209,8 +214,8 @@ with tab3:
                             detected = src_lang
                         
                         tgt_code = lang_codes[tgt_lang]
-                        result = translator.translate(trans_input, src_lang=src_code, dest_lang=tgt_code)
-                        trans_text = result['text'] if isinstance(result, dict) else result
+                        result = translator.translate(trans_input, src=src_code, dest=tgt_code)
+                        trans_text = result.text
                         
                         st.text_area("Result:", value=trans_text, height=120, disabled=True)
                         
